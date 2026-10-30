@@ -1,0 +1,5 @@
+[functions.telegram-gateway]
+# This endpoint serves both authenticated app actions and Telegram's webhook.
+# The function validates Supabase user JWTs itself for app actions and Telegram's
+# secret webhook header for bot updates.
+verify_jwt = false
