@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -12,20 +11,16 @@
 
   <title>موسوعة لينكس العربية | Aiman Mansor</title>
   
-  <!-- الخطوط والأيقونات -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- الخطوط والأيقونات الاحترافية -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cloudflare.com">
   
   <!-- ملف التنسيق الرئيسي -->
   <link rel="stylesheet" href="styles.css">
   
-  <!-- السكربتات وقاعدة البيانات -->
-  <script src="config.js"></script>
-  <script src="https://jsdelivr.net"></script>
-</head>
-
+  <!-- السكربتات ومكتبة قاعدة البيانات الفعالة -->
   <script src="config.js"></script>
   <script src="https://jsdelivr.net"></script>
 </head>
@@ -126,67 +121,10 @@
               <div class="challenge-feedback" id="challengeFeedback"></div>
             </section>
           </div>
-
-          <div class="section-heading compact"><div><span class="eyebrow">LEARNING TRACKS</span><h2>مساراتك التعليمية</h2></div><button class="text-button" data-go="paths">جميع المسارات ←</button></div>
-          <div class="track-grid" id="dashboardTracks"></div>
         </section>
-
-        <section class="view" id="view-paths">
-          <div class="page-intro"><span class="eyebrow">STRUCTURED LEARNING</span><h1>مسارات <em>التعلّم</em></h1><p>ثلاث مراحل متدرجة، تنتقل بينها بالمعرفة والاختبار، وليس بمجرد فتح الصفحة.</p></div>
-          <div class="level-roadmap" id="levelRoadmap"></div>
-          <div class="section-heading"><div><span class="eyebrow">EXPLORE TOPICS</span><h2>مجموعات المعرفة</h2></div></div>
-          <div class="category-grid" id="categoryGrid"></div>
-        </section>
-
-        <section class="view" id="view-library">
-          <div class="page-intro library-intro"><div><span class="eyebrow">LINUX COMMAND ENCYCLOPEDIA</span><h1>موسوعة <em>الأوامر</em></h1><p>مرجع عربي قابل للبحث يضم الأوامر الموجودة في ملفك الأصلي.</p></div><div class="catalog-count"><b>1500</b><span>COMMANDS</span></div></div>
-          <div class="library-toolbar"><div class="search-box"><span>⌕</span><input id="commandSearch" type="search" placeholder="ابحث باسم الأمر أو الشرح..." autocomplete="off"><kbd>/</kbd></div><select id="levelFilter" aria-label="تصفية حسب المستوى"><option value="all">كل المستويات</option><option value="beginner">مبتدئ</option><option value="intermediate">متوسط</option><option value="advanced">متقدم</option></select><select id="categoryFilter" aria-label="تصفية حسب المجموعة"><option value="all">كل المجموعات</option></select></div>
-          <div class="results-line"><span id="resultsCount">جاري تحميل الأوامر...</span><span class="muted-label">اختر أي أمر لعرض التفاصيل</span></div>
-          <div class="command-grid" id="commandGrid"></div>
-          <div class="pagination" id="pagination"></div>
-        </section>
-
-        <section class="view" id="view-lab">
-          <div class="page-intro"><span class="eyebrow">SAFE PRACTICE ENVIRONMENT</span><h1>مختبر <em>الطرفية</em></h1><p>تدرّب على كتابة أوامر أساسية في محاكاة تعليمية. لا يتم تنفيذ أوامر على جهازك أو على خادم حقيقي.</p></div>
-          <div class="lab-layout"><div class="terminal-window"><div class="terminal-top"><div class="window-dots"><i></i><i></i><i></i></div><span>learner@linux-ar: ~</span><span class="terminal-lock">SIMULATED ENVIRONMENT</span></div><div class="terminal-output" id="terminalOutput"><p class="terminal-muted">Linux AR Training Shell · بيئة محاكاة تعليمية</p><p>اكتب <b>help</b> لعرض الأوامر المتاحة.</p></div><form id="terminalForm" class="terminal-input-row"><span>learner@linux-ar:~$</span><input id="terminalInput" autocomplete="off" spellcheck="false" aria-label="اكتب أمرًا تجريبيًا"><button type="submit">تنفيذ</button></form></div><aside class="lab-side panel"><span class="eyebrow">QUICK COMMANDS</span><h3>جرّب هذه الأوامر</h3><button class="quick-command" data-command="pwd">pwd <small>المسار الحالي</small></button><button class="quick-command" data-command="ls -la">ls -la <small>قائمة الملفات</small></button><button class="quick-command" data-command="whoami">whoami <small>المستخدم الحالي</small></button><button class="quick-command" data-command="uname -a">uname -a <small>معلومات النظام</small></button><div class="safety-note"><b>ملاحظة أمنية</b><p>هذه محاكاة بمدخلات مسموحة فقط. لا تلصق كلمات مرور أو بيانات شخصية.</p></div></aside></div>
-          <section class="code-lab panel"><div class="code-lab-heading"><div><span class="eyebrow">CODE WORKSPACE</span><h2>محرر الأكواد</h2><p>اكتب أمثلة Python أو Bash وتدرّب عليها في مساحة منفصلة داخل الدرس.</p></div><div class="code-lab-controls"><label for="codeLanguage">لغة البرمجة</label><select id="codeLanguage"><option value="python">Python</option><option value="bash">Bash</option></select></div></div><textarea id="codeEditor" class="code-editor" spellcheck="false" dir="ltr" aria-label="محرر الأكواد">print("Hello Linux!")</textarea><div class="code-lab-actions"><button class="button button-primary" id="runCodeDemo" type="button">تشغيل تجريبي</button><button class="button button-outline" id="resetCode" type="button">إعادة المثال</button><span class="editor-note">مشغّل تدريبي محدود داخل المتصفح؛ لا ينفّذ كودًا على خادم الموقع أو جهازك.</span></div><div class="code-output" id="codeOutput" aria-live="polite">ستظهر نتيجة التدريب هنا.</div><p class="editor-note">يدعم المشغّل حالياً أمثلة تعليمية محدودة مثل print في Python وأوامر Bash الآمنة المعروفة. ليس بديلاً عن بيئة تشغيل Linux/Python كاملة.</p></section>
-        </section>
-
-        <section class="view" id="view-quizzes">
-          <div class="page-intro"><span class="eyebrow">CHECK YOUR KNOWLEDGE</span><h1>مركز <em>الاختبارات</em></h1><p>اختبر فهمك بعد كل مرحلة. تحتاج إلى 80% على الأقل لاجتياز الاختبار النهائي.</p></div>
-          <div class="quiz-level-grid" id="quizLevelGrid"></div>
-          <div class="quiz-stage panel hidden" id="quizStage"></div>
-          <div class="telegram-gate panel hidden" id="telegramGate"><div class="gate-symbol">▣</div><div><span class="eyebrow">COMMUNITY ACCESS</span><h3>اربط Telegram لفتح المستوى المتوسط</h3><p>1) أنشئ رابط الربط الخاص بحسابك. 2) افتح البوت واضغط Start. 3) اشترك في القناة ثم عد واضغط التحقق. لا يكفي فتح رابط القناة وحده.</p><button class="button button-outline" id="createTelegramLink" type="button">إنشاء رابط ربط حسابي</button><a class="button button-outline hidden" id="telegramStartLink" href="#" target="_blank" rel="noopener">فتح بوت Telegram ↗</a><a class="button button-outline" id="telegramLink" href="https://t.me/something_37" target="_blank" rel="noopener">فتح القناة ↗</a><button class="button button-primary" id="verifyTelegram" type="button">تحقق من اشتراكي</button><small class="gate-message" id="telegramMessage" aria-live="polite">اربط حسابك بالبوت أولاً، ثم تحقّق من الاشتراك.</small></div></div>
-        </section>
-
-        <section class="view" id="view-achievements">
-          <div class="page-intro"><span class="eyebrow">YOUR MILESTONES</span><h1>سجل <em>إنجازاتك</em></h1><p>كل خطوة صغيرة تبني خبرة حقيقية. تابع ما أنجزته وما ينتظرك.</p></div>
-          <div class="achievement-grid" id="achievementGrid"></div>
-        </section>
-
-        <section class="view" id="view-profile">
-          <div class="page-intro"><span class="eyebrow">ACCOUNT & PREFERENCES</span><h1>ملفي <em>الشخصي</em></h1><p>إدارة بيانات العرض والتقدم وسياسة الحساب.</p></div>
-          <div class="profile-layout"><div class="panel profile-card"><div class="profile-avatar" id="profileAvatar">A</div><h2 id="profileUsername">متعلّم</h2><span class="profile-role">LEARNER ACCOUNT</span><div class="profile-stats"><div><b id="profileCommands">0</b><small>أوامر مكتملة</small></div><div><b id="profileQuizzes">0</b><small>اختبارات مجتازة</small></div><div><b id="profileLevel">مبتدئ</b><small>المستوى الحالي</small></div></div></div><div class="panel policy-card"><span class="eyebrow">ACCOUNT POLICY</span><h3>سياسة الحساب والنشاط</h3><p>تتم إدارة جلسات الدخول والبيانات عبر Supabase. لا يتم حذف الحساب تلقائيًا من هذه الواجهة؛ وأي سياسة احتفاظ أو حذف تحتاج إعدادًا مستقلاً موثقًا.</p><ul><li>لا تُخزّن كلمات المرور كنص مكشوف.</li><li>تُحفظ بيانات التقدم في قاعدة بيانات مرتبطة بحسابك.</li><li>تُدار جلسات الدخول من الخادم.</li></ul><div class="demo-warning" id="demoWarning">الحساب متصل بخدمة المصادقة وقاعدة البيانات عند اكتمال إعداد المشروع.</div></div></div>
-        </section>
-
-        <footer class="app-footer"><span>LINUX///AR <i>·</i> موسوعة لينكس العربية</span><span>تصميم وتطوير <b>AIMAN MANSOR</b></span><span>LEARN SECURELY.</span></footer>
       </div>
     </main>
   </div>
-
-  <div class="modal-backdrop hidden" id="commandModal"><div class="command-modal"><button class="modal-close" id="closeCommandModal" aria-label="إغلاق">×</button><span class="eyebrow" id="modalCategory">COMMAND REFERENCE</span><h2 id="modalCommand">ls -la</h2><p id="modalDescription"></p><div class="modal-code"><code id="modalCode"></code><button id="copyCommand">نسخ</button></div><div class="modal-meta"><span id="modalLevel"></span><span id="modalId"></span></div><div class="command-deep-dive" id="commandDeepDive"></div>
-    <section class="lesson-workspace panel" id="lessonWorkspace">
-      <div class="panel-head"><div><span class="eyebrow">LEARN BY DOING</span><h3>طبّق الأمر داخل الدرس</h3><p>جرّب الأمر ثم اكتب مثالاً قصيراً بلغة Python أو Bash.</p></div></div>
-      <div class="terminal-window lesson-terminal-window"><div class="terminal-top"><div class="window-dots"><i></i><i></i><i></i></div><span>learner@linux-ar: lesson</span><span class="terminal-lock">SAFE SIMULATION</span></div><div class="terminal-output lesson-terminal-output" id="lessonTerminalOutput"><p class="terminal-muted">مساحة تدريب خاصة بهذا الدرس.</p></div><form id="lessonTerminalForm" class="terminal-input-row"><span>learner@linux-ar:$</span><input id="lessonTerminalInput" autocomplete="off" spellcheck="false" aria-label="اكتب أمر الدرس"><button type="submit">تنفيذ</button></form></div>
-      <div class="lesson-code-heading"><b>محرر الأكواد</b><select id="lessonCodeLanguage" aria-label="لغة محرر الدرس"><option value="python">Python</option><option value="bash">Bash</option></select></div>
-      <textarea id="lessonCodeEditor" class="code-editor" spellcheck="false" dir="ltr" aria-label="اكتب كود الدرس">print("Hello Linux!")</textarea>
-      <div class="code-lab-actions"><button class="button button-primary" id="runLessonCode" type="button">تشغيل المثال</button><button class="button button-outline" id="resetLessonCode" type="button">إعادة المثال</button></div>
-      <div class="code-output" id="lessonCodeOutput" aria-live="polite">ستظهر نتيجة المحاكاة هنا.</div>
-      <p class="editor-note">المختبر محاكاة آمنة بملفات افتراضية ومشغّل أكواد محدود؛ لا يشغّل أوامر على خادمك أو جهاز الطالب.</p>
-    </section>
-    <div class="modal-practice"><b>جرّب الأمر في المختبر</b><p>يمكنك نقل المثال إلى الطرفية وتجربته في بيئة المحاكاة.</p><button class="button button-outline full-button" id="practiceCommand">فتح في الطرفية</button></div><button class="button button-primary full-button" id="markCommandDone">تحديد كمتعلّم ✓</button></div></div>
-  <div class="toast" id="toast" role="status"></div>
-
   <script src="app.js"></script>
 </body>
 </html>
