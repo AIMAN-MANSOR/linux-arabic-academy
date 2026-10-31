@@ -12,7 +12,10 @@
     lab: 'مختبر الطرفية', quizzes: 'الاختبارات', achievements: 'الإنجازات', profile: 'حسابي'
   };
   const config = window.PLATFORM_CONFIG || {};
-  const supabaseClient = window.supabase?.createClient && config.supabaseUrl && config.supabaseAnonKey
+  const validSupabaseUrl = typeof config.supabaseUrl === 'string' &&
+    /^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(config.supabaseUrl) &&
+    !config.supabaseUrl.includes('YOUR_PROJECT_REF');
+  const supabaseClient = window.supabase?.createClient && validSupabaseUrl && config.supabaseAnonKey
     ? window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey, {
       auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     }) : null;

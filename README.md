@@ -31,3 +31,16 @@
 ### منطق الحماية والأمان (Security Architecture)
 - **حماية البيانات (RLS):** تفعيل سياسات أمان صارمة على مستوى السطور (Row Level Security) لعزل بيانات المستخدمين تماماً؛ حيث لا يملك أي متصفح خارجي صلاحية تعديل أو قراءة معلومات مستخدم آخر.
 - **التحقق من المدخلات (Data Validation):** استخدام دوال تحقق ومصادقة مشددة (Triggers & Database Functions) من جهة السيرفر لتصفية المدخلات وحماية الجداول من هجمات حقن الأكواد وقاعدة البيانات (SQL Injection).
+
+
+## إعداد النشر على Vercel وSupabase
+
+1. اجعل Root Directory في Vercel هو مجلد المستودع الذي يحتوي index.html وapp.js.
+2. المشروع موقع ثابت؛ لا يحتاج Build Command أو Output Directory مخصصاً.
+3. استبدل عنوان YOUR_PROJECT_REF في config.js بعنوان مشروع Supabase الحقيقي.
+4. استخدم Publishable/anon key فقط في الواجهة، ولا تضع service_role في ملفات المتصفح.
+5. شغّل ملف SQL في supabase/migrations على قاعدة البيانات.
+6. انشر Edge Function باسم `telegram-gateway` واضبط الأسرار التالية من لوحة Supabase (لا تضعها في ملفات الواجهة): `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET`, `TELEGRAM_CHANNEL`.
+7. يجب أن يكون بوت Telegram مشرفاً في القناة حتى يستطيع التحقق من العضوية، ويجب ضبط Webhook للبوت على عنوان وظيفة `telegram-gateway` مع ترويسة السر المطابقة لـ `TELEGRAM_WEBHOOK_SECRET`.
+8. استبدل `YOUR-VERCEL-DOMAIN` في `sitemap.xml` بنطاق النشر الحقيقي.
+9. إذا لم تضبط رابط Supabase الحقيقي، سيبقى الموقع في وضع غير متصل ويعرض تنبيه الإعداد بدلاً من محاولة الاتصال بعنوان وهمي.

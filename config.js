@@ -1,13 +1,15 @@
-/* Public browser configuration only. */
-const CONFIG = {
-  SUPABASE_URL: 'https://supabase.co',
-  SUPABASE_ANON_KEY: 'sb_publishable_BuqBfbo8z9eLN1dD_ybwYA_pQXsdscw',
-  telegramChannel: '@something_37',
-  telegramChannelUrl: 'https://t.me',
-  telegramBotUsername: 'LinuxArabicAcademyBot',
-  mode: 'supabase'
-};
-
-// تأمين تصدير الكائن ليكون متاحاً لـ app.js بكافة الصيغ المتوقعة
-window.CONFIG = CONFIG;
-window.PLATFORM_CONFIG = CONFIG;
+/* إعدادات عامة للمتصفح فقط. ضع عنوان مشروع Supabase الحقيقي هنا. */
+(() => {
+  const config = {
+    supabaseUrl: 'https://taeksuuaodwpkmnwbrch.supabase.co',
+    supabaseAnonKey: 'sb_publishable_BuqBfbo8z9eLN1dD_ybwYA_pQXsdscw',
+    telegramChannel: '@something_37',
+    telegramChannelUrl: 'https://t.me/something_37',
+    telegramBotUsername: 'LinuxArabicAcademyBot',
+    mode: 'supabase'
+  };
+  config.SUPABASE_URL = config.supabaseUrl;
+  config.SUPABASE_ANON_KEY = config.supabaseAnonKey;
+  window.CONFIG = config;
+  window.PLATFORM_CONFIG = config;
+})();
